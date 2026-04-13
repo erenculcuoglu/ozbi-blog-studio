@@ -49,6 +49,29 @@ export default defineType({
       title: 'Body',
       type: 'blockContent',
     }),
+    defineField({
+      name: 'faqs',
+      title: 'SSS (FAQ)',
+      type: 'array',
+      of: [
+        {
+          name: 'faqItem',
+          type: 'object',
+          fields: [
+            defineField({
+              name: 'question',
+              title: 'Soru',
+              type: 'string',
+            }),
+            defineField({
+              name: 'answer',
+              title: 'Cevap',
+              type: 'text',
+            }),
+          ],
+        },
+      ],
+    }),
   ],
 
   preview: {
