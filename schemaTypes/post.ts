@@ -50,6 +50,13 @@ export default defineType({
       type: 'blockContent',
     }),
     defineField({
+      name: 'seoDescription',
+      title: 'SEO Meta Description',
+      type: 'string',
+      description: 'Google arama sonuçlarında görünen açıklama. Maksimum 155 karakter.',
+      validation: (Rule) => Rule.max(155),
+    }),
+    defineField({
       name: 'faqs',
       title: 'SSS (FAQ)',
       type: 'array',
